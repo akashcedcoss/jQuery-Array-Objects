@@ -1,3 +1,4 @@
+var html = "";
 var products = [
   { id: 101, name: "Basket Ball", image: "basketball.png", price: 150 },
   { id: 102, name: "Football", image: "football.png", price: 120 },
@@ -17,6 +18,17 @@ $(document).ready(function(){
             <li><a href="#">Contact</a></li>
         </ul>
     </nav>`);
+    
+    // BODY SECTION 
+    $('#products').html(body());
+
+
+
+
+
+
+
+
    // FOOTER SECTION
     $('#footer').html(`<nav>
     <ul id="footer-links">
@@ -25,3 +37,16 @@ $(document).ready(function(){
     </ul>
 </nav>`)
 });
+
+function body(){
+    
+    for(var i = 0; i < products.length; i++){
+        html += (`<div id="product-${products[i].id}" class="product">
+        <img src="images/${products[i].image}">
+        <h3 class="title"><a href="#">Product ${products[i].id}</a></h3>
+        <span>Price: ${products[i].price}</span>
+        <a class="add-to-cart" href="#">Add To Cart</a>
+    </div>`)
+    }
+    return html;
+}
