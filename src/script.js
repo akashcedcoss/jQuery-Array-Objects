@@ -54,7 +54,20 @@ var products = [
         displayCart();
       });
     
-       
+       $(`body`).on('click', '.rmBtn', function(){
+         var rm_id = $(this).data('rm_id');
+         var rmObj = getProduct(rm_id);
+         cartArray.splice(cartArray.indexOf(rmObj), 1);
+         displayCart();
+        });
+    
+        
+        $(`body`).on('click', '.emptyCart', function(){
+         cartArray = [];
+         displayCart();
+        });
+    
+        $('body').on('click', '')
 });
 
   ///////////////////////////////////
