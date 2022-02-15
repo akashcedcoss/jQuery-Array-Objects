@@ -143,6 +143,47 @@ body{
 	border-radius: 5px;
 	border: 1px solid #cccccc; 
 }
-#addcart{
+
+#cart{
 	border: 2px solid black;
+    padding: 4%;
+    display: flex;
+}
+
+td img{
+	height: 50px;
+}
+table{
+	width: 100%;
+	text-align: center;
+}
+#cartDiv{
+	text-align: center;
+}
+th{
+	font-size: 18px;
+}
+#cartDiv{
+	border: 5px solid black;
+}
+#cartDiv span{
+	font-size: 48px;
+}
+.emptyCart{
+    background-color: red;
+    padding: 2% 3%;
+	color: white;
+    text-decoration: none;
+}
+.fl_l{
+	float: left;
+	width: 45%;
+}
+.fl_r{
+	float: right;
+	width: 45%;
+	padding: 2%;
+}
+.cartPrice{
+	font-size: 24px;
 }
